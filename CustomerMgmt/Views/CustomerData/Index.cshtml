@@ -1,0 +1,85 @@
+﻿@model IEnumerable<CustomerMgmt.Models.客戶資料>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>客戶資料</h2>
+
+<p>
+    @Html.ActionLink(" ", "Create", null, new { @class = "glyphicon glyphicon-plus" })
+</p>
+<p>
+	<form action="">
+		搜尋：<input type="search" name="search" value="" />
+		<input type="submit" value="搜尋" />
+	</form>
+</p>
+<table class="table table-inverse">
+    <tr>
+		<th></th>
+        <th>
+            @Html.DisplayNameFor(model => model.客戶名稱)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.統一編號)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.電話)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.傳真)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.地址)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Email)
+        </th>
+		<th>
+			@Html.DisplayNameFor(model => model.是否已刪除)
+		</th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+		<td>
+			@Html.ActionLink(" ", "Index", "CustomerContact", new { id = item.Id }, new { @class = "glyphicon glyphicon-phone-alt" })
+			@Html.ActionLink(" ", "Index", "CustomerBankAccount", new { id = item.Id }, new { @class = "glyphicon glyphicon-credit-card" })
+		</td>
+        <td>
+            @Html.DisplayFor(modelItem => item.客戶名稱)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.統一編號)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.電話)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.傳真)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.地址)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Email)
+        </td>
+		<td>
+			@Html.DisplayFor(modelItem => item.是否已刪除)
+		</td>
+		<td>
+			@Html.ActionLink(" ", "Edit", new { id = item.Id }, new { @class = "glyphicon glyphicon-edit" })
+			@Html.ActionLink(" ", "Details", new { id = item.Id }, new { @class = "glyphicon glyphicon-info-sign" })
+			@if (item.是否已刪除.Equals(false))
+			{
+				@Html.ActionLink(" ", "Delete", new { id = item.Id }, new { @class = "glyphicon glyphicon-trash" })
+			}
+		</td>
+
+
+    </tr>
+}
+
+</table>

@@ -1,0 +1,48 @@
+﻿@model IEnumerable<CustomerMgmt.Models.vw_CustomerList>
+@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="jumbotron" style="background-color:#333333; color: #ffffff;">
+	<h1>客戶管理</h1>
+	<p class="lead">維護客戶資料、聯絡人、及銀行帳戶明細</p>
+	
+</div>
+
+<div class="row">
+	<div class="col-md-4">
+		<h2>@Html.ActionLink("客戶資料", "Index", "CustomerData", null, new { @style = "color: #ffffff;"})</h2>
+		<p></p>
+		<p>@Html.ActionLink(" ", "Index", "CustomerData", null, new { @class = "glyphicon glyphicon-user" })</p>
+	</div>
+	<div class="col-md-4">
+		<h2>@Html.ActionLink("客戶聯絡人", "Index", "CustomerContact", null, new { @style = "color: #ffffff;" })</h2>
+		<p></p>
+		<p>@Html.ActionLink(" ", "Index", "CustomerContact", null, new { @class = "glyphicon glyphicon-phone-alt" })</p>
+	</div>
+	<div class="col-md-4">
+		<h2>@Html.ActionLink("客戶銀行帳戶", "Index", "CustomerBankAccount", null, new { @style = "color: #ffffff;" })</h2>
+		<p></p>
+		<p>@Html.ActionLink(" ", "Index", "CustomerBankAccount", null, new { @class = "glyphicon glyphicon-credit-card" })</p>
+	</div>
+</div>
+
+<div class="row" style="margin-top: 50px;">
+	<div class="col-md-12">
+		<table class="table table-inverse table-bordered">
+			<tr>
+				<th>@Html.DisplayNameFor(model => model.客戶名稱)</th>
+				<th>@Html.DisplayNameFor(model => model.聯絡人數量)</th>
+				<th>@Html.DisplayNameFor(model => model.銀行帳戶數量)</th>
+			</tr>
+		@foreach (var item in Model)
+		{
+			<tr>
+				<td>@Html.ActionLink(item.客戶名稱.ToString(), "Details", "CustomerData", new { id = item.Id }, null)</td>
+				<td>@Html.ActionLink(item.聯絡人數量.ToString(), "Index", "CustomerContact", new { id = item.Id }, null)</td>
+				<td>@Html.ActionLink(item.銀行帳戶數量.ToString(), "Index", "CustomerBankAccount", new { id = item.Id }, null)</td>
+			</tr>
+		}
+		</table>
+	</div>
+</div>
