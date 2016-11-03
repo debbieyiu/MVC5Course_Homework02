@@ -190,12 +190,22 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="assets\css\bootstrap.css" />
+    <Content Include="assets\css\font-awesome.css" />
+    <Content Include="assets\css\style.css" />
+    <Content Include="assets\fonts\fontawesome-webfont.svg" />
+    <Content Include="assets\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="assets\img\64-64.jpg" />
+    <Content Include="assets\img\logo.png" />
+    <Content Include="assets\js\bootstrap.js" />
+    <Content Include="assets\js\jquery-1.11.1.js" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="index.html" />
     <Content Include="Models\CustomerModel.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>CustomerModel.Context.cs</LastGenOutput>
@@ -219,6 +229,15 @@
     <Content Include="Models\CustomerModel.edmx.diagram">
       <DependentUpon>CustomerModel.edmx</DependentUpon>
     </Content>
+    <Content Include="assets\fonts\fontawesome-webfont.eot" />
+    <Content Include="assets\fonts\fontawesome-webfont.ttf" />
+    <Content Include="assets\fonts\fontawesome-webfont.woff" />
+    <Content Include="assets\fonts\fontawesome-webfont.woff2" />
+    <Content Include="assets\fonts\FontAwesome.otf" />
+    <Content Include="assets\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="assets\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="assets\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="assets\fonts\glyphicons-halflings-regular.woff2" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -257,6 +276,7 @@
     <Content Include="Views\CustomerBankAccount\Details.cshtml" />
     <Content Include="Views\CustomerBankAccount\Edit.cshtml" />
     <Content Include="Views\CustomerBankAccount\Index.cshtml" />
+    <Content Include="Views\Shared\_LayoutNew.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
