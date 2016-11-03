@@ -82,6 +82,5 @@ D:\MVC5 Course\Homework\MVC5Course_Homework02\CustomerMgmt\bin\System.Web.WebPag
 D:\MVC5 Course\Homework\MVC5Course_Homework02\CustomerMgmt\bin\System.Web.WebPages.Razor.xml
 D:\MVC5 Course\Homework\MVC5Course_Homework02\CustomerMgmt\bin\Antlr3.Runtime.pdb
 D:\MVC5 Course\Homework\MVC5Course_Homework02\CustomerMgmt\bin\Newtonsoft.Json.xml
-D:\MVC5 Course\Homework\MVC5Course_Homework02\CustomerMgmt\obj\Debug\CustomerMgmt.csprojResolveAssemblyReference.cache
 D:\MVC5 Course\Homework\MVC5Course_Homework02\CustomerMgmt\obj\Debug\CustomerMgmt.dll
 D:\MVC5 Course\Homework\MVC5Course_Homework02\CustomerMgmt\obj\Debug\CustomerMgmt.pdb
